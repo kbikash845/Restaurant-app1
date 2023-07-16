@@ -2,6 +2,10 @@ import React from 'react'
 import classes from './MealItemForm.module.css'
 import Input from '../../UI/Input'
 
+function ChangeHandler(event){
+  event.preventDefault()
+}
+
 function MealItemForm() {
   return (
     <form className={classes.form}>
@@ -15,7 +19,7 @@ function MealItemForm() {
         step:'1',
         defaultValue:'1'
       }}/>
-      <button>+Add</button>
+      <button onClick={ChangeHandler}>+Add</button>
     </form>
   )
 }
