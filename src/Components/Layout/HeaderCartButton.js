@@ -9,8 +9,11 @@ function HeaderCartButton(props) {
   const numberOfCardItem=cartCtx.items.reduce((curNumber,item)=>{
     return curNumber+item.amount
   },0)
+
+  const btnClasses=`${classes.button} ${classes.bump}`;
+
   return (
-    <button className={classes.button} onClick={props.onclick}>
+    <button className={btnClasses} onClick={props.onclick}>
         <span className={classes.icon}>
             <CartIcon/>
         </span>
